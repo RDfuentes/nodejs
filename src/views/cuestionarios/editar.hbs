@@ -1,0 +1,34 @@
+<div class="col-md-4 mx-auto">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/cuestionarios/editar/{{link.id}}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombre del cuestionario" value="{{link.nombre}}" autofocus>
+                </div>
+                <div class="form-group">
+                    <label>Numero de preguntas</label>
+                    <select name="num_preguntas" class="form-control" id="">
+                        <option >Preguntas actuales: "{{link.num_preguntas}}"</option>
+                        <option value="1">1 pregunta</option>
+                        <option value="2">2 preguntas</option>
+                        <option value="3">3 preguntas</option>
+                        <option value="4">4 preguntas</option>
+                        <option value="5">5 preguntas</option>
+                    </select>
+                    
+                </div>
+
+       
+                <div class="form-group">
+                    <textarea name="descripcion" rows="2" class="form-control" placeholder="Descripción">{{link.descripcion}}</textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
