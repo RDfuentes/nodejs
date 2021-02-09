@@ -6,11 +6,10 @@
                 <div class="card-body">
                     <form action="/cuestionarios/agregar" method="POST">
                         <div class="form-group">
-                            <input type="text" name="nombre" class="form-control" placeholder="Nombre del cuestionario" autofocus>
+                            <input type="text" name="nombre" class="form-control" placeholder="Nombre del cuestionario" required autofocus>
                         </div>
 
                         <div class="form-group">
-                            <label>Numero de preguntas</label>
                             <select name="num_preguntas" class="form-control" id="">
                                 <option >Seleccione número de preguntas</option>
                                 <option value="1">1 pregunta</option>

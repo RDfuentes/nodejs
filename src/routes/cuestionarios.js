@@ -17,7 +17,7 @@ router.post('/agregar', async (req, res) => {
         id_usuario: req.user.id
     };
     await pool.query('INSERT INTO cuestionarios set ?', [newLink]);
-    req.flash('success', 'Link Saved Successfully');
+    req.flash('success', 'Cuestionario Creado Exitosamente');
     res.redirect('/cuestionarios');
 });
 
@@ -29,7 +29,7 @@ router.get('/', isLoggedIn, async (req, res) => {
 router.get('/delete/:id', async (req, res) => {
     const { id } = req.params;
     await pool.query('DELETE FROM cuestionarios WHERE ID = ?', [id]);
-    req.flash('success', 'Link Removed Successfully');
+    req.flash('success', 'Cuestionario Eliminado Exitosamente');
     res.redirect('/cuestionarios');
 });
 
@@ -49,7 +49,7 @@ router.post('/editar/:id', async (req, res) => {
         num_preguntas
     };
     await pool.query('UPDATE cuestionarios set ? WHERE id = ?', [newLink, id]);
-    req.flash('success', 'Link Updated Successfully');
+    req.flash('success', 'Cuestionario Modificado Exitosamente');
     res.redirect('/cuestionarios');
 });
 
